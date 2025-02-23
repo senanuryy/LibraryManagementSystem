@@ -1,0 +1,29 @@
+﻿@model AuthorCreateViewModel
+
+<!-- Sayfa Başlığı: Yeni Yazar Ekleme Formu -->
+<h3 class="text-center">Yeni Yazar Ekleme Formu</h3>			
+
+<!-- Form başlatılıyor, POST metodu ile veriler gönderilecek -->
+<form method="post" asp-controller="Author" asp-action="Create">
+
+	<div>
+		<!-- Yazar Adı için etiket ve input alanı -->
+		<label>Yazar Adı</label>
+		<input asp-for="FirstName" class="form-control" />		
+
+		<!-- Yazar Soyadı için etiket ve input alanı -->
+		<label>Yazar Soyadı</label>
+		<input asp-for="LastName" class="form-control" />		
+
+		<!-- Yazar Doğum Tarihi için etiket ve input alanı -->
+		<label>Yazar Doğum Tarihi</label>
+		<input asp-for="DateOfBirth" class="form-control" />	
+	</div>
+
+	<!-- Geri Dön butonu -->
+	<a asp-controller="Home" asp-action="Index" class="btn btn-secondary mt-4 fw-bold float-end">Geri Dön</a>
+	<!-- Yazar Kaydet butonu, formu gönderir -->
+	<button type="submit" class="btn btn-warning mt-4 fw-bold float-end me-2">Yazar Kaydet</button>	
+
+</form>
+

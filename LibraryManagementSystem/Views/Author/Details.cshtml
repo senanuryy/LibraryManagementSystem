@@ -1,0 +1,10 @@
+﻿@model AuthorDetailsViewModel
+
+<h2>Yazar Detayları</h2>
+<p><strong>Id:</strong> @Model.Id</p>
+<p><strong>Yazar Adı:</strong> @Model.FirstName</p>
+<p><strong>Yazar Soyadı:</strong> @Model.LastName</p>
+<p><strong>Doğum Tarihi:</strong> @Model.DateOfBirth</p>
+
+<!-- 'Geri Dön' butonu, 'Author' controller'ına yönlendirme yapacak -->
+<a asp-controller="Author" asp-action="List" class="btn btn-secondary mt-4 fw-bold float-end">Geri Dön</a>

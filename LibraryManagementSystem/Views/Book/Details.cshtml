@@ -1,0 +1,13 @@
+﻿@model BookDetailsViewModel
+
+<h2>Kitap Detayları</h2>
+<p><strong>Id:</strong> @Model.Id</p>
+<p><strong>Başlık:</strong> @Model.Title</p>
+<p><strong>Yazar Id:</strong> @Model.AuthorId</p>
+<p><strong>Tür:</strong> @Model.Genre</p>
+<p><strong>Yayın Tarihi:</strong> @Model.PublishDate</p>
+<p><strong>ISBN:</strong> @Model.ISBN</p>
+<p><strong>Stok:</strong> @Model.CopiesAvailable</p>
+
+<!-- Geri Dön butonu -->
+<a asp-controller="Book" asp-action="List" class="btn btn-secondary mt-4 fw-bold float-end">Geri Dön</a>

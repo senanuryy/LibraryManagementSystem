@@ -1,0 +1,41 @@
+﻿@model BookCreateViewModel
+
+<h3 class="text-center">Yeni Kitap Ekleme Formu</h3>
+
+<form method="post" asp-controller="Book" asp-action="Create">
+
+	<div>
+		<!-- Kitap adı girişi -->
+		<label>Kitap Adı</label>
+		<input asp-for="Title" class="form-control" />
+
+		<!-- Kitap türü girişi -->
+		<label>Kitap Türü</label>
+		<input asp-for="Genre" class="form-control" />
+		
+		<!-- Yazar seçimi, ViewBag üzerinden gelen yazarlar listesi ile doluyor -->
+		<label>Yazar</label>
+		<select class="form-control" asp-items="@(new SelectList(ViewBag.Authors,"Id", "FullName"))"></select>
+
+		<!-- Yayın tarihi girişi -->
+		<label>Kitap Yayın Tarihi</label>
+		<input asp-for="PublishDate" class="form-control" />
+
+		<!-- Kitap ISBN girişi -->
+		<label>Kitap ISBN</label>
+		<input asp-for="ISBN" class="form-control" />
+
+		<!-- Kitap stok sayısı girişi -->
+		<label>Kitap Stok Sayısı</label>
+		<input asp-for="CopiesAvailable" class="form-control" />
+
+	</div>
+	
+	<!-- Ana sayfaya dönme butonu -->
+	<a asp-controller="Home" asp-action="Index" class="btn btn-secondary mt-4 fw-bold float-end">Geri Dön</a>
+
+	<!-- Kitap kaydetme butonu -->
+	<button type="submit" class="btn btn-warning mt-4 fw-bold float-end me-2">Kitap Kaydet</button>	
+	
+</form>
+

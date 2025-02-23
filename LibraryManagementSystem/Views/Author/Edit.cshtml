@@ -1,0 +1,25 @@
+﻿@model AuthorEditViewModel
+
+<h3 class="text-center">Yazar Düzenleme Formu</h3>
+
+<!-- Form başlatılıyor ve 'POST' yöntemi ile 'Author' controller'ındaki 'Edit' action'ına veri gönderilecek -->
+<form method="post" asp-controller="Author" asp-action="Edit">
+
+	<!-- Yazarın ID'si gizli alan olarak gönderiliyor -->
+	<input asp-for="Id" type="hidden" />
+
+	<div>
+		<label>Yazar Adı</label>
+		<input asp-for="FirstName" class="form-control" />
+
+		<label>Yazar Soyadı</label>
+		<input asp-for="LastName" class="form-control" />
+
+	</div>
+
+	<!-- 'Geri Dön' butonu, 'Author' controller'ındaki 'List' action'ına yönlendirecek -->
+	<a asp-controller="Author" asp-action="List" class="btn btn-secondary mt-4 fw-bold float-end">Geri Dön</a>
+	<!-- 'Yazar Güncelle' butonu formu gönderecek -->
+	<button type="submit" class="btn btn-warning mt-4 fw-bold float-end me-2">Yazar Güncelle</button>
+
+</form>

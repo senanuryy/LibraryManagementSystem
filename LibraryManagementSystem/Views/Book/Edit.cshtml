@@ -1,0 +1,22 @@
+﻿@model BookEditViewModel
+
+<h3 class="text-center">Kitap Düzenleme Formu</h3>
+
+<form method="post" asp-controller="Book" asp-action="Edit">
+
+	<!-- Kitap Id'si gizli alan olarak gönderiliyor -->
+	<input asp-for="Id" type="hidden" />
+
+	<div>
+		<label>Kitap Adı</label>
+		<input asp-for="Title" class="form-control" />		
+
+	</div>
+
+	<!-- Geri Dön butonu -->
+	<a asp-controller="Author" asp-action="List" class="btn btn-secondary mt-4 fw-bold float-end">Geri Dön</a>
+	
+	<!-- Kitap Güncelle butonu -->
+	<button type="submit" class="btn btn-warning mt-4 fw-bold float-end me-2">Kitap Güncelle</button>
+
+</form>
